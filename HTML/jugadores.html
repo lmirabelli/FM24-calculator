@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script defer src="../JS/menu.js"></script>
+    <script defer src="../JS/calculador-plantilla.js"></script>
+    <link rel="shortcut icon" href="../IMG/logo.png" type="image/x-icon">
+    <title>Jugadores</title>
+</head>
+<body>
+    <nav id="menu"></nav>
+    <div class="botonera formularioAtributos">
+        <div class="cuarto">
+            <h2>Arquero</h2>
+            <label for="inputAlcanceAereo">Alcance Aereo<input id="inputAlcanceAereo" type="number"></label>
+            <label for="inputBlocaje">Blocaje<input id="inputBlocaje" type="number"></label>
+            <label for="inputComunicacion">Comunicacion<input id="inputComunicacion" type="number"></label>
+            <label for="inputControlGK">Control (GK)<input id="inputControlGK" type="number"></label>
+            <label for="inputExcentricidad">Excentricidad<input id="inputExcentricidad" type="number"></label>
+            <label for="inputPunos">Puños<input id="inputPunos" type="number"></label>
+            <label for="inputMandoArea">Mando en el Area<input id="inputMandoArea" type="number"></label>
+            <label for="inputPasesGK">Pases (GK)<input id="inputPasesGK" type="number"></label>
+            <label for="inputReflejos">Reflejos<input id="inputReflejos" type="number"></label>
+            <label for="inputSalidas">Salidas<input id="inputSalidas" type="number"></label>
+            <label for="inputSaqueMano">Saque con la Mano<input id="inputSaqueMano" type="number"></label>
+            <label for="inputSaquePuerta">Saques de Puerta<input id="inputSaquePuerta" type="number"></label>
+            <label for="inputUnoVsUno">Uno Contra Uno<input id="inputUnoVsUno" type="number"></label>
+        </div>
+        <div class="cuarto">
+            <h2>Tecnicos</h2>
+            <label for="inputCabeceo">Cabeceo<input type="number" name="" id="inputCabeceo"></label>
+            <label for="inputCentros">Centros<input type="number" name="" id="inputCentros"></label>
+            <label for="inputControl">Control<input type="number" name="" id="inputControl"></label>
+            <label for="input">Entradas<input type="number" name="" id="inputEntradas"></label>
+            <label for="input">Marcaje<input type="number" name="" id="inputMarcaje"></label>
+            <label for="input">Pases<input type="number" name="" id="inputPases"></label>
+            <label for="input">Penales<input type="number" name="" id="inputPenales"></label>
+            <label for="input">Regate<input type="number" name="" id="inputRegate"></label>
+            <label for="input">Remate<input type="number" name="" id="inputRemate"></label>
+            <label for="input">Saques de Esquina<input type="number" name="" id="inputSaqueEsquina"></label>
+            <label for="input">Saques Largos<input type="number" name="" id="inputSaquesLargos"></label>
+            <label for="input">Tecnica<input type="number" name="" id="inputTecnica"></label>
+            <label for="input">Tiros Lejanos<input type="number" name="" id="inputTiroLejano"></label>
+            <label for="input">Tiros Libres<input type="number" name="" id="inputTiroLibre"></label>
+        </div>
+        <div class="cuarto">
+            <h2>Mentales</h2>
+            <label for="input">Agresividad<input type="number" name="" id="inputAgresividad"></label>
+            <label for="input">Anticipacion<input type="number" name="" id="inputAnticipacion"></label>
+            <label for="input">Colocacion<input type="number" name="" id="inputColocacion"></label>
+            <label for="input">Concentracion<input type="number" name="" id="inputConcentracion"></label>
+            <label for="input">Decisiones<input type="number" name="" id="inputDecisiones"></label>
+            <label for="input">Desmarques<input type="number" name="" id="inputDesmarques"></label>
+            <label for="input">Determinacion<input type="number" name="" id="inputDeterminacion"></label>
+            <label for="input">Juego en Equipo<input type="number" name="" id="inputJuegoEquipo"></label>
+            <label for="input">Liderazgo<input type="number" name="" id="inputLiderazgo"></label>
+            <label for="input">Sacrificio<input type="number" name="" id="inputSacrificio"></label>
+            <label for="input">Serenidad<input type="number" name="" id="inputSerenidad"></label>
+            <label for="input">Talento<input type="number" name="" id="inputTalento"></label>
+            <label for="input">Valentia<input type="number" name="" id="inputValentia"></label>
+            <label for="input">Vision<input type="number" name="" id="inputVision"></label>
+        </div>
+        <div class="cuarto">
+            <h2>Fisicos</h2>
+            <label for="input">Aceleracion<input type="number" name="" id="inputAceleracion"></label>
+            <label for="input">Agilidad<input type="number" name="" id="inputAgilidad"></label>
+            <label for="input">Alcance de Salto<input type="number" name="" id="inputAlcanceSalto"></label>
+            <label for="input">Equilibrio<input type="number" name="" id="inputEquilibrio"></label>
+            <label for="input">Fuerza<input type="number" name="" id="inputFuerza"></label>
+            <label for="input">Recuperacion Fisica<input type="number" name="" id="inputRecuperacionFisica"></label>
+            <label for="input">Resistencia<input type="number" name="" id="inputResistencia"></label>
+            <label for="input">Velocidad<input type="number" name="" id="inputVelocidad"></label>
+        </div>
+        <div class="botonazos">
+            <button id="botonCalculador">Calcular</button>
+        </div>
+    </div>
+    <div id="printPosiciones">
+        <h2>Arqueros</h2>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Rol</div>
+            <div class="valorDeRol">Defensa</div>
+            <div class="valorDeRol">Apoyo</div>
+            <div class="valorDeRol">Ataque</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Portero</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Portero Cierre</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+
+        <h2>Defensas Centrales</h2>
+
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Rol</div>
+            <div class="valorDeRol">Defensa</div>
+            <div class="valorDeRol">Apoyo / Tapon</div>
+            <div class="valorDeRol">Ataque / Cubrir</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Defensa Central</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Libero</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol ">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Defensa con Toque</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Central Practico</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Central Lateral</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        
+        <h2>Defensores de Banda</h2>
+
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Rol</div>
+            <div class="valorDeRol">Defensa</div>
+            <div class="valorDeRol">Apoyo</div>
+            <div class="valorDeRol">Ataque</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Lateral</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Carrilero</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Lateral Practico</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Carrilero Completo</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Carrilero Inverso</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Lateral Inverso</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+
+        <h2>Mediocampistas y Mediapuntas Centrales</h2>
+
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Rol</div>
+            <div class="valorDeRol">Defensa</div>
+            <div class="valorDeRol">Apoyo</div>
+            <div class="valorDeRol">Ataque</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Mediocentro</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Pivote Organizador</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Centrocampista Recuperador</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Pivote Defensivo</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Medio Cierre</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Regista</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Organizador Intinerante</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Segundo Volante</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Centrocampista</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Centrocampista Todoterreno</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Organizador Adelantado</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Mezzala</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Interior Mixto</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Mediapunta</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Trequartista</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Enganche</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Delantero Sorpresa</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+
+        <h2>Mediocampistas y Mediapuntas de Banda</h2>
+
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Rol</div>
+            <div class="valorDeRol">Defensa</div>
+            <div class="valorDeRol">Apoyo</div>
+            <div class="valorDeRol">Ataque</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Centrocampista de Banda</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Extremo</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Extremo Defensivo</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Organizador Banda</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Extremo Inverso</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Delantero Interior</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Delantero Objetivo Escorado</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Buscador de Espacios</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+
+        <h2>Delanteros</h2>
+
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Segundo Delantero</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol"></div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Delantero Avanzado</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Delantero Objetivo</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Ariete</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Delantero Completo</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Delantero Presionante</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        <div class="lineaDeRol">
+            <div class="nombreDeRol">Falso 9</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+            <div class="valorDeRol">-</div>
+        </div>
+        </div>
+</body>
+</html>

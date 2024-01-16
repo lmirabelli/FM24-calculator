@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="../JS/menu.js"></script>
+    <script defer src="../JS/calculador-plantilla.js"></script>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="shortcut icon" href="../IMG/logo.png" type="image/x-icon">
+    <title>Plantilla</title>
+</head>
+
+<body>
+    <nav id="menu"></nav>
+    <div class="botonera">
+        <div class="cargaDocumento">
+            <h2>Descarga la vista de la plantilla</h2>
+            <a href="https://www.mediafire.com/file/w2a817xr0661ac2/Atributos_-_calculator.fmf/file" target="_blank">Descarga Aqui!!!</a>
+            <h2>Carga la plantilla en formato HTML</h2>
+            <input type="file" id="fileInput" accept=".html">
+            <button onclick="cargarArchivo()">Cargar Archivo</button>
+        </div>
+        <h1>Posicion</h1>
+        <div class="btn-posiciones">
+            <h2>Arquero</h2>
+            <button id="porteros" class="btn">Arqueros</button>
+        </div>
+        <div class="btn-posiciones">
+            <h2>Defensa Centrales</h2>
+            <button id="centralLateral" class="btn" data-puesto="defensor">Central Lateral</button>
+            <button id="centralPractico" class="btn" data-puesto="defensor">Central Practico</button>
+            <button id="defensaCentral" class="btn" data-puesto="defensor">Defensa Central</button>
+            <button id="defensaCentralToque" class="btn" data-puesto="defensor">Defensa Con Toque</button>
+            <button id="libero" class="btn" data-puesto="defensor">Libero</button>
+        </div>
+        <div class="btn-posiciones">
+            <h2>Defensa Laterales</h2>
+            <button id="carrilero" class="btn" data-puesto="defensor">Carrilero</button>
+            <button id="carrileroCompleto" class="btn" data-puesto="defensor">Carrilero Completo</button>
+            <button id="carrileroInverso" class="btn" data-puesto="defensor">Carrilero Inverso</button>
+            <button id="lateral" class="btn" data-puesto="defensor">Lateral</button>
+            <button id="lateralInverso" class="btn" data-puesto="defensor">Lateral Inverso</button>
+            <button id="lateralPractico" class="btn" data-puesto="defensor">Lateral Practico</button>
+        </div>
+        <div class="btn-posiciones">
+            <h2>Mediocampo y Mediapuntas Centrales</h2>
+            <button id="centrocampista" class="btn" data-puesto="medio">Centrocampista</button>
+            <button id="centrocampistaRecuperador" class="btn" data-puesto="medio">Centrocampista Recuperador</button>
+            <button id="centrocampistaTodoterreno" class="btn" data-puesto="medio">Centrocampista Todoterreno</button>
+            <button id="enganche" class="btn" data-puesto="medio">Enganche</button>
+            <button id="interiorMixto" class="btn" data-puesto="medio">Interior Mixto</button>
+            <button id="mediapunta" class="btn" data-puesto="medio">Mediapunta</button>
+            <button id="medioCierre" class="btn" data-puesto="medio">Medio Cierre</button>
+            <button id="mediocentro" class="btn" data-puesto="medio">Mediocentro</button>
+            <button id="mezzala" class="btn" data-puesto="medio">Mezzala</button>
+            <button id="organizadorIntinerante" class="btn" data-puesto="medio">Organizador Intinerante</button>
+            <button id="organizadorAdelantado" class="btn" data-puesto="medio">Organizador Adelantado</button>
+            <button id="pivoteDefensivo" class="btn" data-puesto="medio">Pivote Defensivo</button>
+            <button id="pivoteOrganizador" class="btn" data-puesto="medio">Pivote Organizador</button>
+            <button id="regista" class="btn" data-puesto="medio">Regista</button>
+            <button id="segundoVolante" class="btn" data-puesto="medio">Segundo Volante</button>
+            <button id="delanteroSorpresa" class="btn" data-puesto="medio">Delantero Sorpresa</button>
+        </div>
+        <div class="btn-posiciones">
+            <h2>Mediocampo y Mediapuntas de Bandas</h2>
+            <button id="buscadorDeEspacios" class="btn" data-puesto="medio">Buscador de Espacios</button>
+            <button id="centrocampistaDeBanda" class="btn" data-puesto="medio">Centrocampista de Banda</button>
+            <button id="delanteroInterior" class="btn" data-puesto="medio">Delantero Interior</button>
+            <button id="delanteroObjetivoEscorado" class="btn" data-puesto="medio">Delantero Objetivo Escorado</button>
+            <button id="extremo" class="btn" data-puesto="medio">Extremo</button>
+            <button id="extremoDefensivo" class="btn" data-puesto="medio">Extremo Defensivo</button>
+            <button id="extremoInverso" class="btn" data-puesto="medio">Extremo Inverso</button>
+            <button id="organizadorDeBanda" class="btn" data-puesto="medio">Organizador de Banda</button>
+            <button id="trequartista" class="btn" data-puesto="medio">Trequartista</button>
+        </div>
+        <div class="btn-posiciones">
+            <h2>Delanteros</h2>
+            <button id="ariete" class="btn" data-puesto="delantero">Ariete</button>
+            <button id="delanteroAvanzado" class="btn" data-puesto="delantero">Delantero Avanzado</button>
+            <button id="delanteroCompleto" class="btn" data-puesto="delantero">Delantero Completo</button>
+            <button id="delanteroObjetivo" class="btn" data-puesto="delantero">Delantero Objetivo</button>
+            <button id="delanteroPresionante" class="btn" data-puesto="delantero">delantero Presionante</button>
+            <button id="segundoDelantero" class="btn" data-puesto="delantero">Segundo Delantero</button>
+            <button id="falsoNueve" class="btn" data-puesto="delantero">Falso 9</button>
+        </div>
+
+    </div>
+    <div id="printDatos"></div>
+    <div id="cargaExitosa" class="modal">
+        <h2>La Plantilla ha sido cargada</h2>
+        <h3>EXITOSAMENTE</h3>
+        <button onclick="cerrarModal('cargaExitosa')">Cerrar</button>
+    </div>
+    <div class="blur-container"></div>
+    <div id="jugadorIndividual"></div>
+</body>
+
+</html>
