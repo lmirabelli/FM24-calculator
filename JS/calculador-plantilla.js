@@ -976,6 +976,7 @@ let impresionDeArqueros = (jugadores) => {
     }
 
     arqueros.sort((a, b) => b.porpromedio - a.porpromedio)
+    printDatos.style.display = 'block'
     printDatos.innerHTML = `<div class="player">
 <div class="name titulo">Nombre</div>
 <div class="data titulo">Prom.</div>
