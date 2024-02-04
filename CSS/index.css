@@ -605,6 +605,37 @@ body {
     }
 }
 
+.colaboracion{
+    width: 50%;
+    margin: 24px auto;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 18px 46px 0 var(--colorNegro), inset 0 4px 8px 0 var(--colorNegro);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 25px;
+    border: 4px solid var(--color3);
+    padding: 2rem;
+    position: sticky;
+    top: 24px;
+    z-index: 3;
+    a{
+        background-color: var(--color1);
+        color: var(--color2);
+        padding: 0 4px;
+        text-decoration: none;
+        border-radius: 4px;
+        border: 1px solid var(--color2);
+        box-shadow: 0 18px 46px 0 var(--colorNegro);
+        transition: background 650ms;
+        text-transform: uppercase;
+        line-height: 24px;
+        &:hover{
+            background-color: var(--color3);
+        }
+    }
+}
+
 @keyframes rotar {
     0% {
         transform: rotatey(0deg);
