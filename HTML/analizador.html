@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script defer src="../JS/menu.js"></script>
+    <script defer src="../JS/analizar-plantilla.js"></script>
+    <title>Analizador de Plantilla</title>
+</head>
+
+<body>
+    <nav id="menu"></nav>
+    <main>
+        <div class="importador">
+            <div class="plantillaBox">
+                <h2>Descarga la vista</h2>
+                <button>
+                    <a href="https://www.mediafire.com/file/d3i97e6f3sgkcsu/Economico_-_calculator.fmf/file"
+                        target="_blank">Descarga Acá!!!</a>
+                </button>
+            </div>
+            <label for="htmlAanalizar">Cargar Plantilla</label>
+            <input type="file" name="htmlAanalizar" id="htmlAnalizar">
+            <button id="cargar">Cargar</button>
+        </div>
+        <div class="grupoDeDatos">
+            <div id="minutosAcordados" class="sector"></div>
+            <div id="minutosAcordadosGrafico">
+                <svg class="torta">
+
+                </svg>
+            </div>
+            <div id="jugadoresMayorSalario" class="sector"></div>
+        </div>
+        <div class="grupoDeDatos">
+            <div id="salarioxminuto" class="sector"></div>
+            <div id="salariosinminutos" class="sector"></div>
+        </div>
+        <div class="grupoDeDatos">
+            <div id="contratosBox" class="sector"></div>
+        </div>
+        <div class="grupoDeDatos">
+            <div id="salarioxatributo" class="sector"></div>
+        </div>
+        <div class="grupoDeDatos">
+            <div id="primasPagadas" class="sector"></div>
+        </div>
+    </main>
+    <div class="modalEconomico"></div>
+</body>
+
+</html>

@@ -8,5 +8,6 @@ if(document.getElementById('menu')){
     <a href="../index.html">Inicio</a>
     <a href="../HTML/jugadores.html">Jugador</a>
     <a href="../HTML/plantilla.html">Plantilla</a>
+    <a href="../HTML/analizador.html">Analizador</a>
     </div>`
 }
